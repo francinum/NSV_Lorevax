@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Impliments terminal.js by Erik Österberg, Licensed under the MIT license available at vax.beestation13.com/license.txt
+-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.75" />
+        <script src="script/jquery-3.5.1.min.js"></script>
+        <script src="script/terminal.js"></script>
+        <title>Ardata Records network</title>
+
+
+        <link rel="stylesheet" href="styles/terminal.css">
+    </head>
+
+    <body >
+        <div class="scanlines">
+            <div class="scanline"></div>
+            <div class="flicker"></div>
+        </div>
+        <div class="body">
+            <script>
+                var vax = new Terminal()
+                var uname = null //amN6YW5law== - jczanek
+                var pword = null //YmF6b25nbw== - bazongo
+                var loggedin = false
+                var dateunit = new Date
+                $(".body").append(vax.html)
+                
+                vax.print("RAISA DOCUMENT STORAGE SYSTEM", "lg")
+                vax.print("THE DATE IS " + ((dateunit.getUTCFullYear() + 240) +"-"+ dateunit.getUTCMonth() +"-"+ dateunit.getUTCDate()) , "lg")
+                vax.print("USER IDENTITY:", "lg")
+                vax.print("USR ID -1 NOT FOUND", "red")
+                vax.print("USER GROUP:", "lg")
+                vax.print("GRP ID -1 NOT FOUND", "red")
+                vax.print("USER ACCESS:", "lg")
+                vax.print("LOW LEVEL EMPLOYEE-RESTRICTED INFORMATION", "amber")
+                vax.printempty()
+                vax.printempty()
+                vax.print(">---------------------------<", "amber")
+                vax.print("‏‏‎ ‎LISTING AVAILABLE DOCUMENTS‏‏‎ ", "amber")
+                vax.print(">---------------------------<", "amber")
+                vax.printempty()
+                vax.printempty()
+                //Install new lore documents here.
+                /*
+                vax.printempty()
+                vax.print("RECORD ID: ARD-#####", "lg")
+                vax.printicdate("UPLOAD DATE","2020-09-24T00:16:17+00:00", "lg") //THIS SHOULD BE AN ISO 8601 TIMESTAMP IN UTC.
+                vax.print("RECORD NAME: RECORD NAME", "lg")
+                vax.printlink("ACCESS RECORD", "lg", "null")
+                vax.printempty()
+                vax.printempty()
+                vax.print(">---------------------------<", "g")
+                */
+                vax.printempty()
+                vax.print("RECORD ID: ARD-#####", "lg")
+                vax.printicdate("UPLOAD DATE","2020-09-24T00:16:17+00:00", "lg")
+                vax.print("RECORD NAME: RECORD NAME", "lg")
+                vax.printlink("ACCESS RECORD", "lg", "null")
+                vax.printempty()
+                vax.printempty()
+                vax.print(">---------------------------<", "g")
+                vax.printempty()
+                vax.print("RECORD ID: ARD-#####", "lg")
+                vax.printicdate("UPLOAD DATE","2020-09-24T00:16:17+00:00", "lg")
+                vax.print("RECORD NAME: RECORD NAME", "lg")
+                vax.printlink("ACCESS RECORD", "lg", "null")
+                vax.printempty()
+                vax.printempty()
+                vax.print(">---------------------------<", "g")
+                vax.printempty()
+                vax.print("RECORD ID: ARD-#####", "lg")
+                vax.printicdate("UPLOAD DATE","2020-09-24T00:16:17+00:00", "lg")
+                vax.print("RECORD NAME: RECORD NAME", "lg")
+                vax.printlink("ACCESS RECORD", "lg", "null")
+                vax.printempty()
+                vax.printempty()
+                vax.print(">---------------------------<", "g")
+                vax.printempty()
+                vax.print("RECORD ID: ARD-#####", "lg")
+                vax.printicdate("UPLOAD DATE","2020-09-24T00:16:17+00:00", "lg")
+                vax.print("RECORD NAME: RECORD NAME", "lg")
+                vax.printlink("ACCESS RECORD", "lg", "null")
+                vax.printempty()
+                vax.printempty()
+                vax.print(">---------------------------<", "g")
+            </script>
+        </div>
+</html>

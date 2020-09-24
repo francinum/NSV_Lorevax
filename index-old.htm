@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Impliments terminal.js by Erik Österberg, Licensed under the MIT license available at vax.beestation13.com/license.txt
+-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.75" />
+        <script src="script/jquery-3.5.1.min.js"></script>
+        <script src="script/terminal.js"></script>
+        <title>SYNDICATE AIN TUNNEL</title>
+
+
+        <link rel="stylesheet" href="styles/terminal.css">
+    </head>
+
+    <body >
+        <div class="scanlines">
+            <div class="scanline"></div>
+            <div class="flicker"></div>
+        </div>
+        <div class="body">
+            <script>
+                var vax = new Terminal()
+                var uname = null //amN6YW5law== - jczanek
+                var pword = null //YmF6b25nbw== - bazongo
+                var loggedin = false
+                $(".body").append(vax.html)
+                vax.print("RAISA UNIFIED INFORMATION ACCESS SYSTEM, RUNNING ARDATA-JOHNVAX-v41.3.1-INTERNAL", "lg")
+                vax.print("UNAUTHORIZED USE OF CORPORATE INFORMATION SYSTEMS IS PROHIBITED", "lg")
+                vax.print("JOHNSON VAX AND CONNECTION ORIGIN IDENTIFICATION DATA IS COLLECTED ON CONNECTION", "lg")
+                vax.print("IF YOU ARE NOT CLEARED FOR THIS SYSTEM YOU MUST DISCONNECT IMMEDIATELY.", "lg")
+                vax.printempty()
+                vax.printempty()
+                vax.input("USERNAME:", "g", function (input) {
+                    uname = btoa(input)
+                    vax.print("ERROR: NT_CAC DEVICE NOT FOUND. TERMINAL SECURITY MODE: PERMISSIVE", "amber")
+                    vax.password("PASSWORD:", "g", function (input){
+                        pword = btoa(input)
+                        if(uname == "amN6YW5law==" && pword == "YmF6b25nbw=="){
+                            vax.print("CREDENTIALS ACCEPTED. DECRYPTING LOCAL DATA", "w")
+                            vax.sleep(3000, function(){
+                                vax.clear()
+                                vax.final_command()
+                            })
+
+                        } else{
+                            vax.print("USER ACCOUNT NOT FOUND, TERMINAL LOCKED!", "red")
+                            vax.beep()
+                        }
+                    })
+                })
+
+            </script>
+        </div>
+</html>
